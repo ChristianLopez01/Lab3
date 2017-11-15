@@ -1,6 +1,8 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
+import java.awt.Polygon;
+
 import javax.swing.JPanel;
  
 public class MyPanelClass extends JPanel {
@@ -17,7 +19,7 @@ public class MyPanelClass extends JPanel {
                         int height = y2 - y1;
  
                         //Paint the background
-                        g.setColor(Color.DARK_GRAY);
+                        g.setColor(Color.white);
                         g.fillRect(x1, y1, width + 1, height + 1);
 //                      //Draw a border
 ////                        g.setColor(Color.YELLOW);
@@ -28,7 +30,51 @@ public class MyPanelClass extends JPanel {
 //                        g.drawLine(x1, y1, x2, y2);
 //                        g.setColor(Color.BLACK);
 //                        g.drawLine(x2, y1, x1, y2);
-                        g.setColor(Color.LIGHT_GRAY);
-                        g.fillOval(x2/2 - 55/2, y2/2 - 55/2, 55, 55);
+//                        g.setColor(Color.LIGHT_GRAY);
+//                        g.fillOval(x2/2 - 55/2, y2/2 - 55/2, 55, 55);
+//                        Polygon p = new Polygon();
+//                        p.addPoint(x1 + 5, y1 + 25);
+//                        p.addPoint(x1 + 20, y1 + 10);
+//                        p.addPoint(x1 + 35, y1 + 25);
+//                        p.addPoint(x1 + 25, y1 + 25);
+//                        p.addPoint(x1 + 25, y1 + 45);
+//                        p.addPoint(x1 + 15, y1 + 45);
+//                        p.addPoint(x1 + 15, y1 + 25);
+//                        g.setColor(Color.YELLOW);
+//                        g.fillPolygon(p);
+                        //franjas
+                        g.setColor(Color.red);
+                        g.fillRect(x1, y1, width+1, height-160);
+                        g.setColor(Color.red);
+                        g.fillRect(x1, y1+80, width+1, height-160);
+                        g.setColor(Color.red);
+                        g.fillRect(x1, y1+161, width+1, height-160);
+                        //triangulo azul
+                        Polygon p3 = new Polygon();
+                        p3.addPoint(x1 + 85, y1 + 85);
+                        p3.addPoint(x1 + 0, y1 + 1);
+                        p3.addPoint(x1 + 85, y1 + 85);
+                        p3.addPoint(x1 + 0, y1 + 160);
+                        p3.addPoint(x1 + 0, y1 + 1);
+                        p3.addPoint(x1 + 0, y1 + 1);
+                        p3.addPoint(x1 + 0, y1 + 1);
+                        g.setColor(Color.blue);
+                        g.fillPolygon(p3);
+                        //estrella
+                        Polygon p2 = new Polygon();
+                        p2.addPoint(x1 + 25, y1 + 85);
+                        p2.addPoint(x1 + 41, y1 + 85);
+                        p2.addPoint(x1 + 47, y1 + 70);
+                        p2.addPoint(x1 + 53, y1 + 85);
+                        p2.addPoint(x1 + 69, y1 + 85);
+                        p2.addPoint(x1 + 56, y1 + 95);
+                        p2.addPoint(x1 + 61, y1 + 110);
+                        p2.addPoint(x1 + 47, y1 + 100);
+                        p2.addPoint(x1 + 34, y1 + 110);
+                        p2.addPoint(x1 + 38, y1 + 95);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p2);
+                        
+                       
             }
 }
